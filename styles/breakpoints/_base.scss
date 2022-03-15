@@ -1,0 +1,95 @@
+/******************************************************************
+
+Stylesheet: ベーススタイル
+
+******************************************************************/
+
+
+.font-sm {
+  font-size: 17px;
+}
+
+.font-md {
+  font-size: 19px;
+}
+
+.font-lr {
+  font-size: 23px;
+}
+
+.font-lg {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.mt-sm {
+  margin-top: 16px !important;
+}
+
+.mt-lg {
+  margin-top: 80px !important;
+}
+
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+
+.pb-lg {
+  padding-bottom: 80px !important;
+}
+
+/******************************************************************
+header
+******************************************************************/
+
+.header {
+  height: 50px;
+  background-color: transparent;
+}
+
+.header__inner {
+  height: 36px;
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  line-height: 36px;
+
+  & h1 {
+    margin-bottom: 0;
+    font-size: 26px;
+  }
+}
+
+.header__navicon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 23px;
+  width: 30px;
+  cursor: pointer;
+
+  & span {
+    height: 3px;
+    width: 29px;
+    background-color: black;
+    display: inline-block;
+  }
+
+  & :first-child {
+    transform: translateY(11px);
+  }
+
+  & :last-child {
+    transform: translateY(-11px);
+  }
+}
+
+/******************************************************************
+mv
+******************************************************************/

@@ -1,0 +1,178 @@
+@charset "UTF-8";
+/******************************************************************
+
+Stylesheet: ベーススタイル
+
+******************************************************************/
+.font-sm {
+  font-size: 17px;
+}
+
+.font-md {
+  font-size: 19px;
+}
+
+.font-lr {
+  font-size: 23px;
+}
+
+.font-lg {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.mt-sm {
+  margin-top: 16px !important;
+}
+
+.mt-lg {
+  margin-top: 80px !important;
+}
+
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+
+.pb-lg {
+  padding-bottom: 80px !important;
+}
+
+/******************************************************************
+header
+******************************************************************/
+.header {
+  height: 50px;
+  background-color: transparent;
+}
+
+.header__inner {
+  height: 36px;
+}
+
+.header__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__logo {
+  line-height: 36px;
+}
+
+.header__logo h1 {
+  margin-bottom: 0;
+  font-size: 26px;
+}
+
+.header__navicon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 23px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.header__navicon span {
+  height: 3px;
+  width: 29px;
+  background-color: black;
+  display: inline-block;
+}
+
+.header__navicon :first-child {
+  -webkit-transform: translateY(11px);
+          transform: translateY(11px);
+}
+
+.header__navicon :last-child {
+  -webkit-transform: translateY(-11px);
+          transform: translateY(-11px);
+}
+
+/******************************************************************
+mv
+******************************************************************/
+@media (min-width: 480px) {
+  /******************************************************************
+
+Stylesheet: 480px以上(スマホの横向き)のモニタで適用
+
+******************************************************************/
+}
+
+@media (min-width: 600px) {
+  /******************************************************************
+
+Stylesheet: 600px以上のタブレットやモニタで適用
+
+******************************************************************/
+}
+
+@media (min-width: 960px) {
+  /******************************************************************
+
+Stylesheet: 960px以上のモニタで適用
+
+******************************************************************/
+  .font-sm {
+    font-size: 19px;
+  }
+  .font-md {
+    font-size: 23px;
+  }
+  .font-lr {
+    font-size: 24px;
+  }
+  .font-lg {
+    font-size: 36px;
+  }
+  .mb-lg {
+    margin-bottom: 150px !important;
+  }
+  .pb-lg {
+    padding-bottom: 150px !important;
+  }
+  /******************************************************************
+
+******************************************************************/
+}
+
+@media (min-width: 1280px) {
+  /******************************************************************
+
+Stylesheet: 1280px以上のモニタで適用
+
+******************************************************************/
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /******************************************************************
+
+Stylesheet: Retinaディスプレイで適用
+
+******************************************************************/
+  /* 
+
+EXAMPLE 
+.icon {
+	background: url(images/test@2x.png) no-repeat;
+	background-size: 24px 24px;
+}
+
+*/
+}
+/*# sourceMappingURL=style.css.map */
