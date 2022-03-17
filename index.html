@@ -10,9 +10,14 @@
     <link rel="shortcut icon" href="" type="image/x-icon">
 
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&family=Noto+Serif+Display:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,700;1,100;1,700&display=swap"
+        rel="stylesheet">
 
     <!-- libraries CDN -->
-    
+
 
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -29,7 +34,7 @@
         <div class="header__inner">
             <div class="header__content">
                 <div class="header__logo">
-                    <h1>Cresta Design</h1>
+                    <h1 class="noto-serif italic">Cresta Design</h1>
                 </div>
                 <div class="header__navicon">
                     <span></span>
@@ -41,23 +46,121 @@
     </header>
 
     <section class="mv">
-        <div class="mv__title">
-            <h2>Design for Smile.</h2>
-        </div>
-        <div class="mv__subtitle">
-            <h3>快適なオフィスをデザインする</h3>
+        <div class="mv__content text-center">
+            <div class="mv__title">
+                <h2>Design for Smile.</h2>
+            </div>
+            <div class="mv__subtitle">
+                <h3>快適なオフィスを<br>デザインする</h3>
+            </div>
         </div>
     </section>
 
     <section id="concept" class="concept">
-        <div class="concept__title">
-            <h2>CONCEPT</h2>
-        </div>
-        <div class="concept__subtitle">
-            <h3></h3>
+        <div class="concept__inner">
+            <div class="concept__title">
+                <h2 class="noto-serif italic">CONCEPT</h2>
+            </div>
+            <div class="concept__subtitle">
+                <h3 class="text-center">“働きたくなる空間”をデザインする
+                    ことで人々を幸せにする。</h3>
+            </div>
+            <div class="concept__disc">
+                <p>私たちは、オフィスに特化した空間デザイン専門としております。その理由は、「働きたくなる空間で仕事ができれば多くの人を幸せにできるのではないか」と考えるためです。そんな想いの株式会社Cresta
+                    Designだからこそできる空間デザインを提供させていただきます。</p>
+            </div>
+            <div class="concept__image">
+                <img src="images/concept-image@2x.jpg" alt="">
+            </div>
+            <div class="bg_text_r">
+                <span class="noto-serif">Our Concept</span>
+            </div>
         </div>
     </section>
 
+    <section id="works" class="works">
+        <div class="works__inner">
+            <div class="works__title">
+                <h2 class="noto-serif italic">Works</h2>
+            </div>
+            <div class="works__content">
+                <div class="card">
+                    <div class="card__image">
+                        <img src="images/card-img01@2x.jpg" alt="">
+                    </div>
+                    <div class="card__desc">
+                        <p>新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__image">
+                        <img src="images/card-img02@2x.jpg" alt="">
+                    </div>
+                    <div class="card__desc">
+                        <p>新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__image">
+                        <img src="images/card-img03@2x.jpg" alt="">
+                    </div>
+                    <div class="card__desc">
+                        <p>新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="button__box">
+                <button class="button noto-serif">View more</button>
+            </div>
+            <div class="bg_text_l">
+                <span class="noto-serif">Our Works</span>
+            </div>
+        </div>
+    </section><!--#works-->
+
+    <section id="service" class="service">
+        <div class="service__title">
+            <h3 class="noto-serif italic">Service</h3>
+        </div>
+        <div class="service__content">
+            <div class="service__card">
+                <img src="images/service-img01@2x.jpg" alt="">
+                <p class="noto-serif italic">Hearing</p>
+            </div>
+            <div class="service__card">
+                <img src="images/service-img02@2x.jpg" alt="">
+                <p class="noto-serif italic">Planing</p>
+            </div>
+            <div class="service__card">
+                <img src="images/service-img03@2x.jpg" alt="">
+                <p class="noto-serif italic">Direction</p>
+            </div>
+        </div>
+        <div class="bg_text_r">
+            <span class="noto-serif">Our Service</span>
+        </div>
+    </section>
+    
+    <section class="contact">
+        <div class="contact__title">
+            <h2 class="noto-serif italic">Contact</h2>
+        </div>
+        <div class="contact__sub">
+            <p>お気軽にご相談ください</p>
+        </div>
+        <div class="button__box">
+            <button class="button noto-serif">Contact</button>
+        </div>
+        <div class="bg_text_l">
+            <span class="noto-serif">Contact us</span>
+        </div>
+    </section>
+
+    <footer>
+        <p>©︎cresta.design all rights reserved</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>

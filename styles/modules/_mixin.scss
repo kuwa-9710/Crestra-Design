@@ -1,0 +1,18 @@
+@mixin bg_text($text-align: start) {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  font-size: 2rem;
+  color: rgba(23, 23, 23, 0.05);
+  text-align: $text-align;
+}
+
+@mixin line_r($color: $cBlack, $width: 4rem) {
+    display: flex;
+    align-items: center;
+  &::after {
+    border-top: 3px solid $color;
+    content: "";
+    width: $width;
+    margin-left: 2em;
+  }
+}
