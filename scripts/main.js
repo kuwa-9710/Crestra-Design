@@ -576,6 +576,6 @@ window.addEventListener("scroll", function () {
 
 jQuery(function($) {
     $('.mv').bgSwitcher({
-        images: ['../images/fv-bgi_01@2x.jpg','../images/fv-bgi_02@2x.jpg','../images/fv-bgi_03@2x.jpg'], // 切り替える背景画像を指定
+        images: ['/Crestra-Design/../images/fv-bgi_01@2x.jpg','/Crestra-Design/../images/fv-bgi_02@2x.jpg','/Crestra-Design/../images/fv-bgi_03@2x.jpg'], // 切り替える背景画像を指定
     });
 });
