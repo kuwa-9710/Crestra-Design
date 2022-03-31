@@ -315,11 +315,16 @@ works
 }
 
 .works__inner {
-  max-width: 1054px;
+  width: 1200px;
   margin: 0 auto;
   padding-top: 100px;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.works__contents {
+  max-width: 1054px;
+  margin: 0 auto;
 }
 
 .works__title {
@@ -573,6 +578,9 @@ Stylesheet: 960px以上のモニタで適用
   .bg_text_r {
     font-size: 5rem;
   }
+  .bg_text_l {
+    font-size: 5rem;
+  }
   /******************************************************************
 header
 ******************************************************************/
@@ -640,6 +648,18 @@ concept
   }
   .concept__title {
     font-size: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .concept__title::after {
+    border-top: 3px solid black;
+    content: "";
+    width: 9rem;
+    margin-left: 2em;
   }
   .concept__subtitle {
     font-size: 24px;
@@ -660,6 +680,105 @@ concept
   .concept__flex__pc .concept__image {
     width: 440px;
     height: 240px;
+  }
+  /******************************************************************
+works
+******************************************************************/
+  .works__title {
+    font-size: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .works__title::after {
+    border-top: 3px solid #fff;
+    content: "";
+    width: 9rem;
+    margin-left: 2em;
+  }
+  .card {
+    width: 30%;
+  }
+  .card__image img {
+    width: 100%;
+  }
+  /******************************************************************
+service
+******************************************************************/
+  .service__title {
+    max-width: 1054px;
+    margin: 0 auto;
+    font-size: 30px;
+    letter-spacing: 4px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .service__title::after {
+    border-top: 3px solid black;
+    content: "";
+    width: 9rem;
+    margin-left: 2em;
+  }
+  .service__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin-top: 60px;
+  }
+  .service__card {
+    padding-top: 0;
+    cursor: pointer;
+  }
+  .service__card:hover img {
+    opacity: 0.6;
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+  }
+  .service__card p {
+    font-size: 34px;
+  }
+  .service__card:nth-of-type(1) {
+    margin-top: 0px;
+  }
+  .service__card:nth-of-type(2) {
+    margin-top: 0px;
+  }
+  .service__card:nth-of-type(3) {
+    margin-top: 0px;
+  }
+  /******************************************************************
+contact
+******************************************************************/
+  .contact {
+    height: 600px;
+  }
+  .contact__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .contact__title {
+    font-size: 30px;
+    letter-spacing: 4px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact__title::after {
+    border-top: 3px solid #fff;
+    content: "";
+    width: 9rem;
+    margin-left: 2em;
   }
 }
 

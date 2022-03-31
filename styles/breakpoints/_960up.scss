@@ -31,6 +31,9 @@ Stylesheet: 960px以上のモニタで適用
 .bg_text_r {
   font-size: 5rem;
 }
+.bg_text_l {
+  font-size: 5rem;
+}
 
 /******************************************************************
 header
@@ -43,7 +46,7 @@ header
 .header__nav {
   display: flex;
   flex-direction: row;
-  
+
   background-color: transparent;
   position: static;
   height: auto;
@@ -64,7 +67,6 @@ header
     }
   }
 }
-
 
 /******************************************************************
 mv
@@ -88,7 +90,6 @@ mv
 }
 
 .mv__title {
-  
   font-size: 39px;
 }
 
@@ -103,6 +104,7 @@ concept
 
 .concept__title {
   font-size: 30px;
+  @include line_r($cBlack, 9rem);
 }
 
 .concept__subtitle {
@@ -113,14 +115,98 @@ concept
   display: flex;
   justify-content: space-between;
   padding-top: 38px;
-  
+
   & .concept__disc {
     padding-top: 50px;
-    width: 40%;  
+    width: 40%;
   }
 
   & .concept__image {
     width: 440px;
     height: 240px;
   }
+}
+
+/******************************************************************
+works
+******************************************************************/
+
+.works__title {
+  font-size: 30px;
+  @include line_r($cWhite, 9rem);
+}
+
+.card {
+  width: 30%;
+}
+
+.card__image {
+  & img {
+    width: 100%;
+  }
+}
+
+/******************************************************************
+service
+******************************************************************/
+
+.service__title {
+  max-width: 1054px;
+  margin: 0 auto;
+  font-size: 30px;
+  letter-spacing: 4px;
+  @include line_r($cBlack, 9rem);
+}
+
+.service__content {
+  display: flex;
+  width: 100%;
+  margin-top: 60px;
+}
+
+.service__card {
+  padding-top: 0;
+  cursor: pointer;
+  
+
+  &:hover {
+    
+    & img {
+      opacity: 0.6;
+      transition-duration: 0.3s;
+    }
+  }
+
+  & p {
+    font-size: 34px;
+  }
+
+  &:nth-of-type(1) {
+    margin-top: 0px;
+  }
+  &:nth-of-type(2) {
+    margin-top: 0px;
+  }
+  &:nth-of-type(3) {
+    margin-top: 0px;
+  }
+}
+
+/******************************************************************
+contact
+******************************************************************/
+
+.contact {
+  height: 600px;
+}
+
+.contact__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact__title {
+  font-size: 30px;
+  letter-spacing: 4px;
+  @include line_r($cWhite, 9rem);
 }

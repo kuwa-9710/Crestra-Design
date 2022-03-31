@@ -272,11 +272,16 @@ works
 }
 
 .works__inner {
-  max-width: 1054px;
+  width: 1200px;
   margin: 0 auto;
   padding-top: 100px;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.works__contents {
+  max-width: 1054px;
+  margin: 0 auto;
 }
 
 .works__title {
