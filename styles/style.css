@@ -305,7 +305,7 @@ concept
 works
 ******************************************************************/
 .works {
-  background-image: url(../../images/works-bgi@2x.jpg);
+  background-image: url(../../Crestra-Design/images/works-bgi@2x.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -513,7 +513,7 @@ footer
 contact.html
 ******************************************************************/
 .contact__mv {
-  background-image: url(../../images/contact-page-bgi@2x.jpg);
+  background-image: url(../../Crestra-Design/images/contact-page-bgi@2x.jpg);
   background-position: center;
   background-size: cover;
   position: relative;
