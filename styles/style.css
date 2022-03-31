@@ -450,7 +450,7 @@ service
 contact
 ******************************************************************/
 .contact {
-  background-image: url(../../images/contact-bgi@2x.jpg);
+  background-image: url(/Crestra-Design/../../images/contact-bgi@2x.jpg);
   background-position: center;
   background-size: cover;
   height: 485px;
