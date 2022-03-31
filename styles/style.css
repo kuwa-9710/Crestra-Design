@@ -49,6 +49,10 @@ Stylesheet: ベーススタイル
   font-style: italic;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .text-center {
   text-align: center;
 }
@@ -69,6 +73,10 @@ Stylesheet: ベーススタイル
   text-align: left;
 }
 
+.br__pc {
+  display: none;
+}
+
 /******************************************************************
 header
 ******************************************************************/
@@ -77,12 +85,18 @@ header
   width: 100vw;
   background-color: transparent;
   position: fixed;
+  z-index: 100;
 }
 
 .header__inner {
-  height: 36px;
   width: 100%;
   padding: 15px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.header__inner.change-color {
+  background-color: #282F35;
 }
 
 .header__content {
@@ -96,6 +110,8 @@ header
       -ms-flex-align: center;
           align-items: center;
   color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .header__logo {
@@ -121,13 +137,18 @@ header
   height: 23px;
   width: 30px;
   cursor: pointer;
+  position: relative;
+  z-index: 100;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .header__navicon span {
+  display: inline-block;
   height: 3px;
   width: 29px;
   background-color: #fff;
-  display: inline-block;
+  border-radius: 2px;
 }
 
 .header__navicon :first-child {
@@ -140,12 +161,63 @@ header
           transform: translateY(-11px);
 }
 
+.header__navicon.active span:nth-of-type(1) {
+  -webkit-transform: translateY(1.5px) rotate(45deg);
+          transform: translateY(1.5px) rotate(45deg);
+}
+
+.header__navicon.active span:nth-of-type(2) {
+  display: none;
+}
+
+.header__navicon.active span:nth-of-type(3) {
+  -webkit-transform: translateY(-1.5px) rotate(-45deg);
+          transform: translateY(-1.5px) rotate(-45deg);
+}
+
+.header__nav {
+  display: none;
+  background-color: #282F35;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+}
+
+.header__nav ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.header__nav ul li {
+  list-style: none;
+  padding-bottom: 20px;
+}
+
+.header__nav ul li:last-child {
+  padding-bottom: 0;
+}
+
+.header__nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header__nav.active {
+  display: block;
+}
+
 /******************************************************************
 mv
 ******************************************************************/
 .mv {
-  height: 100vh;
-  background-image: url(../../images/fv-bgi_01@2x.jpg);
+  height: 600px;
   background-position: center;
   background-size: cover;
   color: #fff;
@@ -161,12 +233,16 @@ mv
           justify-content: center;
 }
 
+.mv__content {
+  text-align: center;
+}
+
 .mv__title {
   font-family: "Noto Serif Display", serif;
   font-size: 25px;
   font-weight: bold;
-  -webkit-transform: translateY(-30px);
-          transform: translateY(-30px);
+  -webkit-transform: translate3d(0, -30px, 0);
+          transform: translate3d(0, -30px, 0);
 }
 
 .mv__subtitle h3 {
@@ -178,6 +254,8 @@ mv
 concept
 ******************************************************************/
 .concept__inner {
+  max-width: 1200px;
+  margin: 0 auto;
   padding-top: 100px;
   padding-left: 15px;
   padding-right: 15px;
@@ -237,6 +315,8 @@ works
 }
 
 .works__inner {
+  max-width: 1054px;
+  margin: 0 auto;
   padding-top: 100px;
   padding-left: 15px;
   padding-right: 15px;
@@ -366,16 +446,26 @@ contact
 ******************************************************************/
 .contact {
   background-image: url(../../images/contact-bgi@2x.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 485px;
 }
 
 .contact .bg_text_l {
   color: rgba(255, 255, 255, 0.1);
   padding-left: 15px;
   padding-right: 15px;
+  padding-top: 40px;
+}
+
+.contact .button__box {
+  padding-top: 33px;
 }
 
 .contact__title {
-  padding-top: 50px;
+  padding-top: 90px;
+  padding-left: 15px;
+  padding-right: 15px;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
@@ -397,8 +487,41 @@ contact
 
 .contact__sub {
   text-align: center;
-  padding-top: 50px;
+  padding-top: 59px;
   color: #fff;
+}
+
+.contact__sub p {
+  letter-spacing: 2px;
+}
+
+/******************************************************************
+footer
+******************************************************************/
+.footer {
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+}
+
+/******************************************************************
+contact.html
+******************************************************************/
+.contact__mv {
+  background-image: url(../../images/contact-page-bgi@2x.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 360px;
+}
+
+.contact__mvtitle {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 @media (min-width: 480px) {
@@ -441,9 +564,103 @@ Stylesheet: 960px以上のモニタで適用
   .pb-lg {
     padding-bottom: 150px !important;
   }
+  .br__sm {
+    display: none;
+  }
+  .br__pc {
+    display: inline;
+  }
+  .bg_text_r {
+    font-size: 5rem;
+  }
   /******************************************************************
-
+header
 ******************************************************************/
+  .header__navicon {
+    display: none;
+  }
+  .header__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    background-color: transparent;
+    position: static;
+    height: auto;
+    width: auto;
+  }
+  .header__nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: relative;
+    padding-top: 10px;
+    -webkit-transform: none;
+            transform: none;
+    top: 0;
+    left: 0;
+  }
+  .header__nav ul li {
+    width: 90px;
+    padding-bottom: 0;
+  }
+  /******************************************************************
+mv
+******************************************************************/
+  .mv {
+    display: block;
+  }
+  .mv__inner {
+    height: 100%;
+    padding: 15px;
+    max-width: 1200px;
+    position: relative;
+    margin: 0 auto;
+  }
+  .mv__content {
+    position: absolute;
+    top: 330px;
+  }
+  .mv__title {
+    font-size: 39px;
+  }
+  /******************************************************************
+concept
+******************************************************************/
+  .concept__content {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .concept__title {
+    font-size: 30px;
+  }
+  .concept__subtitle {
+    font-size: 24px;
+  }
+  .concept__flex__pc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-top: 38px;
+  }
+  .concept__flex__pc .concept__disc {
+    padding-top: 50px;
+    width: 40%;
+  }
+  .concept__flex__pc .concept__image {
+    width: 440px;
+    height: 240px;
+  }
 }
 
 @media (min-width: 1280px) {

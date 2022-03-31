@@ -45,6 +45,10 @@ Stylesheet: ベーススタイル
   font-style: italic;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .text-center {
   text-align: center;
 }
@@ -57,6 +61,10 @@ Stylesheet: ベーススタイル
   @include bg_text(left);
 }
 
+.br__pc {
+  display: none;
+}
+
 /******************************************************************
 header
 ******************************************************************/
@@ -66,12 +74,17 @@ header
   width: 100vw;
   background-color: transparent;
   position: fixed;
+  z-index: 100;
 }
 
 .header__inner {
-  height: 36px;
   width: 100%;
   padding: 15px;
+  transition: 0.4s;
+
+  &.change-color {
+    background-color: #282F35;
+  }
 }
 
 .header__content {
@@ -79,6 +92,8 @@ header
   justify-content: space-between;
   align-items: center;
   color: $cWhite;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .header__logo {
@@ -97,12 +112,15 @@ header
   height: 23px;
   width: 30px;
   cursor: pointer;
-
+  position: relative;
+  z-index: 100;
+  transition: 0.4s;
   & span {
+    display: inline-block;
     height: 3px;
     width: 29px;
     background-color: $cWhite;
-    display: inline-block;
+    border-radius: 2px;
   }
 
   & :first-child {
@@ -114,13 +132,66 @@ header
   }
 }
 
+.header__navicon.active {
+  
+  & span:nth-of-type(1) {
+    transform: translateY(1.5px) rotate(45deg);
+  }
+  & span:nth-of-type(2) {
+    display: none;
+  }
+  & span:nth-of-type(3) {
+    transform: translateY((-1.5px)) rotate(-45deg);
+  }
+}
+
+
+.header__nav {
+  display: none;
+  background-color: $cGray;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  
+  & ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    & li {
+      list-style: none;
+      padding-bottom: 20px;
+      
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  & a {
+    text-decoration: none;
+    color: $cWhite;
+  }
+}
+
+.header__nav.active {
+  display: block;
+  
+}
+
 /******************************************************************
 mv
 ******************************************************************/
 
 .mv {
-  height: 100vh;
-  background-image: url(../../images/fv-bgi_01@2x.jpg);
+  height: 600px;
+  // background-image: url(../../images/fv-bgi_01@2x.jpg);
   background-position: center;
   background-size: cover;
   color: $cWhite;
@@ -129,11 +200,15 @@ mv
   justify-content: center;
 }
 
+.mv__content {
+  text-align: center;
+}
+
 .mv__title {
   font-family: "Noto Serif Display", serif;
   font-size: 25px;
   font-weight: bold;
-  transform: translateY(-30px);
+  transform: translate3d(0, -30px, 0);
 }
 
 .mv__subtitle {
@@ -148,6 +223,8 @@ concept
 ******************************************************************/
 
 .concept__inner {
+  max-width: 1200px;
+  margin: 0 auto;
   padding-top: 100px;
   padding-left: 15px;
   padding-right: 15px;
@@ -195,6 +272,8 @@ works
 }
 
 .works__inner {
+  max-width: 1054px;
+  margin: 0 auto;
   padding-top: 100px;
   padding-left: 15px;
   padding-right: 15px;
@@ -291,16 +370,24 @@ contact
 ******************************************************************/
 .contact {
   background-image: url(../../images/contact-bgi@2x.jpg);
-
+  background-position: center;
+  background-size: cover;
+  height: 485px;
   & .bg_text_l {
     color: rgba(255, 255, 255, 0.1);
     padding-left: 15px;
     padding-right: 15px;
+    padding-top: 40px;
+  }
+  & .button__box {
+    padding-top: 33px;
   }
 }
 
 .contact__title {
-  padding-top: 50px;
+  padding-top: 90px;
+  padding-left: 15px;
+  padding-right: 15px;
   justify-content: end;
   @include line_r($cWhite, 6rem);
   color: $cWhite;
@@ -308,6 +395,43 @@ contact
 
 .contact__sub {
   text-align: center;
-  padding-top: 50px;
+  padding-top: 59px;
   color: $cWhite;
+
+  & p {
+    letter-spacing: 2px;
+  }
 }
+
+
+/******************************************************************
+footer
+******************************************************************/
+
+.footer {
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+}
+
+
+/******************************************************************
+contact.html
+******************************************************************/
+
+.contact__mv {
+  background-image: url(../../images/contact-page-bgi@2x.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 360px;
+}
+
+.contact__mvtitle {
+  color: $cWhite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+

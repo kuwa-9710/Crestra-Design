@@ -22,7 +22,105 @@ Stylesheet: 960px以上のモニタで適用
 .pb-lg {
   padding-bottom: 150px !important;
 }
+.br__sm {
+  display: none;
+}
+.br__pc {
+  display: inline;
+}
+.bg_text_r {
+  font-size: 5rem;
+}
 
 /******************************************************************
-
+header
 ******************************************************************/
+
+.header__navicon {
+  display: none;
+}
+
+.header__nav {
+  display: flex;
+  flex-direction: row;
+  
+  background-color: transparent;
+  position: static;
+  height: auto;
+  width: auto;
+
+  & ul {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding-top: 10px;
+    transform: none;
+    top: 0;
+    left: 0;
+
+    & li {
+      width: 90px;
+      padding-bottom: 0;
+    }
+  }
+}
+
+
+/******************************************************************
+mv
+******************************************************************/
+
+.mv {
+  display: block;
+}
+
+.mv__inner {
+  height: 100%;
+  padding: 15px;
+  max-width: 1200px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.mv__content {
+  position: absolute;
+  top: 330px;
+}
+
+.mv__title {
+  
+  font-size: 39px;
+}
+
+/******************************************************************
+concept
+******************************************************************/
+
+.concept__content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.concept__title {
+  font-size: 30px;
+}
+
+.concept__subtitle {
+  font-size: 24px;
+}
+
+.concept__flex__pc {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 38px;
+  
+  & .concept__disc {
+    padding-top: 50px;
+    width: 40%;  
+  }
+
+  & .concept__image {
+    width: 440px;
+    height: 240px;
+  }
+}
